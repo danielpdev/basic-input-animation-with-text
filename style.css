@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+.form-control {
+  margin: 20px;
+  position: relative;
+  width: 200px;
+  height: 40px;
+  overflow: hidden;
+  border-bottom: 0;
+}
+.form-control input {
+  position: relative;
+  bottom: 14px;
+  width: 100%;
+  border: 0;
+  outline: none;
+  height: 100%;
+  text-align: left;
+  padding-top: 10%;
+  transition: 0.4s;
+}
+.form-control input:focus + label,
+.form-control input:valid + label {
+  top: 0px;
+  font-size: 0.7rem;
+  color: black;
+}
+
+.form-control input:focus ~ div {
+  left: 0;
+  transition: 0.4s;
+}
+
+.form-control label {
+  position: absolute;
+  bottom: 0px;
+  top: 20px;
+  left: 0px;
+  transition: 0.2s;
+  border-bottom: 2px solid lightblue;
+  width: 100%;
+  color: lightblue;
+  pointer-events: none;
+}
+.form-control div {
+  position: absolute;
+  border: 1px solid black;
+  width: 100%;
+  left: -101%;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.form-control input:focus + label.blue,
+.form-control input:valid + label.blue {
+  top: 0px;
+  font-size: 0.7rem;
+  color: blue;
+}
